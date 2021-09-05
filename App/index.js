@@ -38,7 +38,7 @@ export default class App extends React.Component {
           {this.state.output}
         </Text>
           <Text style={styles.value}>
-           {this.state.previousValue?parseFloat(this.state.previousValue).toLocaleString():null} {this.state.operator} {parseFloat(this.state.currentValue).toLocaleString()}
+           {this.state.previousValue?parseFloat(this.state.previousValue).toLocaleString():null} {this.state.operator} {this.state.currentValue?parseFloat(this.state.currentValue).toLocaleString():null}
           </Text>
           <Row>
             <Button
@@ -54,7 +54,7 @@ export default class App extends React.Component {
             <Button
               text="&#9003;"
               theme="secondary"
-              onPress={() =>this.handleTap("posneg")}
+              onPress={() =>this.handleTap("bcksp")}
             />
             <Button
               text="&#247;"
