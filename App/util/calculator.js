@@ -7,10 +7,10 @@ export const initialState = {
 
 export const handleNumber = (value, state) => {
   if (state.currentValue === "0") {
-    return { currentValue: `${value}` };
+    return { currentValue: `${value}`};
   }
   return {
-    currentValue: `${value}`
+    currentValue: `${state.currentValue*10 + value}`
   };
 };
 
@@ -52,7 +52,6 @@ export const handleEqual = state => {
       // ...resetState
     };
   }
-
   return state;
 };
 

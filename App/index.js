@@ -28,7 +28,6 @@ export default class App extends React.Component {
   handleTap = (type, value) => {
     this.setState(state => calculator(type, value, state));
   };
-
   render() {
     return (
       <View style={styles.container}>
